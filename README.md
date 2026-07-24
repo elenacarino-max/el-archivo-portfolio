@@ -1,91 +1,43 @@
-# El Archivo · Portfolio de Elena
+# 🗂️ EL ARCHIVO
 
-Portfolio profesional creado con React, TypeScript y Vite. La experiencia presenta proyectos de datos, Machine Learning, Business Intelligence, MLOps y desarrollo de aplicaciones como expedientes resueltos dentro de un archivo visual.
+> **No empecé de cero. Empecé de nuevo.**
 
-## Requisitos
+Portfolio profesional de **Elena de Vicente**, desarrollado como una experiencia narrativa para presentar proyectos de análisis de datos, Machine Learning, Business Intelligence, MLOps y desarrollo de aplicaciones.
 
-- Node.js 20 o superior.
-- npm 10 o superior.
+En lugar de mostrar los proyectos como una lista tradicional, cada uno se presenta como un **expediente**: un problema investigado, una solución desarrollada y un conjunto de competencias demostradas.
 
-## Instalación
+---
 
-```bash
-npm install
-```
+## 🔎 La pregunta que abre el archivo
 
-## Desarrollo
+> **¿Qué ocurre cuando una persona con años dirigiendo proyectos decide empezar de cero en Inteligencia Artificial?**
 
-```bash
-npm run dev
-```
+La respuesta se encuentra detrás de cada puerta.
 
-Vite mostrará la URL local en la terminal.
+**Casos reales · Datos · Machine Learning · Soluciones digitales**
 
-## Comprobaciones
+---
 
-```bash
-npm run lint
-npm run build
-```
+## 🌐 Portfolio
 
-`npm run lint` ejecuta la comprobación estricta de TypeScript. `npm run build` genera la versión de producción en `dist/`.
+- **Portfolio publicado:** [Abrir El Archivo](https://elenacarino-max.github.io/el-archivo-portfolio/)
+- **Perfil de GitHub:** [elenacarino-max](https://github.com/elenacarino-max)
+- **LinkedIn:** [Elena de Vicente](https://www.linkedin.com/in/elena-de-vicente-391991313/)
 
-## Vista previa de producción
+> La URL de publicación puede necesitar actualizarse según la configuración final de GitHub Pages.
 
-```bash
-npm run preview
-```
+---
 
-## Estructura
+## 🕵️ Concepto
 
-- `src/data/cases.ts`: contenido tipado de los seis expedientes.
-- `src/components/`: componentes reutilizables.
-- `src/pages/`: portada, pasillo, expediente dinámico y página no encontrada.
-- `src/styles/global.css`: diseño visual, responsive, foco visible y reducción de movimiento.
-- `public/images/`: estructura preparada para capturas futuras.
-- `public/images/corridor/`: imagen ambiental del pasillo y placeholder sustituible.
-- `public/documents/cv-elena-de-vicente.pdf`: CV descargable desde el expediente 000.
+**El Archivo** transforma un portfolio técnico en una experiencia visual.
 
-## Actualizar expedientes
+La navegación comienza con una portada y continúa por un pasillo con seis puertas. Cada puerta conduce a un expediente profesional:
 
-El contenido de los proyectos está centralizado en `src/data/cases.ts`. Para añadir o cambiar un proyecto, modifica sus campos de datos sin tocar la plantilla de `CasePage`.
-
-No incluyas contraseñas, claves API ni datos privados. Los enlaces que no existan todavía deben quedarse como pendientes.
-
-## Imagen del pasillo
-
-La portada y el pasillo usan la variable CSS `--corridor-image`. Su ruta se define en `src/data/visualAssets.ts` para respetar automáticamente el `base` de Vite en local y GitHub Pages.
-
-Ahora apunta a la imagen optimizada del archivo:
-
-```ts
-export const corridorBackgroundImage = `${import.meta.env.BASE_URL}images/corridor/corridor-archive.webp`;
-```
-
-El pasillo muestra los expedientes profesionales alternados en ambos lados y reserva la puerta central del fondo para el expediente 000.
-
-## Añadir evidencias reales
-
-Cada elemento de `evidence` puede seguir siendo un texto pendiente o convertirse en una evidencia completa:
-
-```ts
-{
-  label: "Dashboard ejecutivo en Power BI",
-  image: "images/cases/003/dashboard-principal.webp",
-  alt: "Página principal del dashboard Choose Your Side",
-  href: "https://github.com/elenacarino-max/DashboardStarWars",
-  kind: "image",
-}
-```
-
-Guarda la imagen dentro de `public/images/cases/<número>/`. La plantilla se encargará de mostrarla y mantendrá el placeholder de los elementos que todavía no tengan archivo.
-
-## GitHub Pages
-
-El proyecto usa `HashRouter` para que las rutas funcionen al recargar en GitHub Pages. Vite está configurado con:
-
-```ts
-base: "/el-archivo-portfolio/"
-```
-
-El workflow de despliegue está en `.github/workflows/deploy.yml` y publica `dist/` en GitHub Pages cuando se hace push a `main`.
+```text
+001 · Biblioteca Jedi · MLflow
+002 · BiciMAD Predictor
+003 · Choose Your Side
+004 · Mas ClimApp
+005 · Roles de Datos en España
+000 · El Origen
