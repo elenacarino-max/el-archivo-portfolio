@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elenacarino-max.github.io/el-archivo-portfolio/sitemap.xml
