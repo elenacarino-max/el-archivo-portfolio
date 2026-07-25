@@ -523,15 +523,31 @@ export const cases: PortfolioCase[] = [
       { name: "MLOps", purpose: "Seguimiento de experimentos, despliegue y reproducibilidad." },
     ],
     evidence: [
-      "Cinco expedientes de proyectos.",
-      "Masterclass de MLflow.",
-      "Repositorios profesionales.",
+      {
+        label: "Cinco expedientes de proyectos.",
+        href: `${import.meta.env.BASE_URL}#/archivo`,
+        kind: "link",
+      },
+      {
+        label: "Experiencia formativa y masterclass de MLflow.",
+        href: `${import.meta.env.BASE_URL}#/expediente/biblioteca-jedi-mlflow`,
+        kind: "link",
+      },
+      {
+        label: "Repositorios profesionales.",
+        href: "https://github.com/elenacarino-max",
+        kind: "link",
+      },
       {
         label: "CV profesional actualizado.",
         href: `${import.meta.env.BASE_URL}documents/cv-elena-de-vicente.pdf`,
         kind: "document",
       },
-      "Perfil de LinkedIn.",
+      {
+        label: "Perfil profesional de LinkedIn.",
+        href: "https://www.linkedin.com/in/elena-devicente/",
+        kind: "link",
+      },
     ],
     conclusion: [
       "Busco una oportunidad en la que pueda seguir creciendo dentro del análisis de datos, Business Intelligence, Machine Learning o el desarrollo de soluciones basadas en datos.",
