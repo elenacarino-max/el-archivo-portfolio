@@ -69,6 +69,17 @@ export const natureLabels: Record<ProjectNature, string> = {
   "collaborative-evolution": "Proyecto colaborativo con evolución individual en desarrollo",
 };
 
+const caseImage = (
+  caseId: string,
+  fileName: string,
+  label: string,
+  alt: string = label,
+): CaseEvidence => ({
+  label,
+  image: `images/cases/${caseId}/${fileName}`,
+  alt,
+});
+
 export const cases: PortfolioCase[] = [
   {
     id: "001",
@@ -127,12 +138,12 @@ export const cases: PortfolioCase[] = [
       { name: "Jupyter Notebook", purpose: "Live coding, práctica y reto final." },
     ],
     evidence: [
-      "Captura de la aplicación.",
-      "Capturas o fotografías de la masterclass, cuando estén disponibles.",
-      "Materiales docentes.",
-      "Notebooks.",
-      "Repositorio.",
-      "Aplicación desplegada.",
+      caseImage("001", "001-01.webp", "Centro de mando del Consejo", "Panel docente de Biblioteca Jedi con sesión activa, código de equipo y seguimiento."),
+      caseImage("001", "001-02.webp", "Reto interactivo de una cámara", "Vista del alumnado en la cámara Experiment con un reto de selección múltiple."),
+      caseImage("001", "001-03.webp", "Laboratorio de misiones", "Laboratorio de Biblioteca Jedi con las misiones Tatooine, Coruscant y Mustafar."),
+      caseImage("001", "001-04.webp", "Seguimiento e intervenciones del Consejo", "Panel docente con el progreso del equipo y controles de intervención."),
+      caseImage("001", "001-05.webp", "Progreso por las seis cámaras", "Listado de las seis cámaras de aprendizaje completadas por el equipo."),
+      caseImage("001", "001-06.webp", "Terminal editable de misión", "Terminal de código de la misión guiada para registrar una ejecución en MLflow."),
     ],
     conclusion: [
       "Este proyecto comenzó como una propuesta para explicar MLflow y terminó convirtiéndose en una experiencia educativa completa, con aplicación, documentación, ejercicios, live coding y una sesión real impartida.",
@@ -203,10 +214,12 @@ export const cases: PortfolioCase[] = [
       { name: "Joblib", purpose: "Persistencia del modelo." },
     ],
     evidence: [
-      "Capturas de la aplicación.",
-      "Métricas de modelos.",
-      "Repositorio colaborativo.",
-      "Pantallas de consulta operativa y ciudadana.",
+      caseImage("002", "002-01.webp", "Vista ciudadana y mapa de estaciones", "BiciMAD Predictor con selector de estación, hora y mapa de estaciones cercanas."),
+      caseImage("002", "002-02.webp", "Predicción de disponibilidad", "Resultado de disponibilidad prevista con bicicletas y anclajes libres."),
+      caseImage("002", "002-03.webp", "Formulario de reserva", "Formulario de reserva futura con estación, fecha, hora y valoración."),
+      caseImage("002", "002-04.webp", "Cuadro de mando de reservas", "Panel analítico con reservas, anulaciones y valoración media."),
+      caseImage("002", "002-05.webp", "Simulación operativa por estación", "Simulación de disponibilidad según fecha, hora y condiciones climáticas."),
+      caseImage("002", "002-06.webp", "Analítica de demanda y anulaciones", "Gráficos de estaciones demandadas, motivos de anulación y demanda horaria."),
     ],
     conclusion: [
       "El proyecto conecta predicción y toma de decisiones: no se limita a estimar disponibilidad, sino que ayuda a interpretar qué acción operativa puede tener sentido después.",
@@ -276,10 +289,13 @@ export const cases: PortfolioCase[] = [
       { name: "Power BI", purpose: "Construcción del dashboard estratégico." },
     ],
     evidence: [
-      "Capturas del dashboard.",
-      "Notebook de análisis.",
-      "Repositorio.",
-      "Documentación del proceso.",
+      caseImage("003", "003-01.webp", "La señal perdida", "Dashboard con indicadores generales y distribución de fans por edad y género."),
+      caseImage("003", "003-02.webp", "Los clanes de la galaxia", "Segmentación de personas encuestadas por tipo de audiencia y películas visualizadas."),
+      caseImage("003", "003-03.webp", "El mapa emocional", "Mapa de afinidad de personajes y tabla de emociones de marca."),
+      caseImage("003", "003-04.webp", "Puertas de entrada al universo", "Preferencias de películas, taquilla mundial y puerta emocional de entrada."),
+      caseImage("003", "003-05.webp", "Planetas como experiencias", "Tabla de planetas, atmósferas de marca y conceptos de experiencia."),
+      caseImage("003", "003-06.webp", "Tecnología, poder y velocidad", "Análisis de naves, armas y símbolos con mayor presencia en la saga."),
+      caseImage("003", "003-07.webp", "Estrategia de activación", "Ruta de activación recomendada por audiencia, hallazgos y sesgos de la muestra."),
     ],
     conclusion: [
       "El resultado convierte respuestas de encuesta en una herramienta de lectura estratégica, con foco en perfiles, patrones y conclusiones accionables.",
@@ -354,11 +370,10 @@ export const cases: PortfolioCase[] = [
       { name: "Pytest", purpose: "Pruebas automatizadas." },
     ],
     evidence: [
-      "Capturas de la demo.",
-      "Repositorio.",
-      "Pruebas.",
-      "Documentación.",
-      "Pantallas de alertas y comparación.",
+      caseImage("004", "004-01.webp", "Tiempo real y navegación", "Pantalla principal de ClimApp con datos de AEMET y opciones de acceso."),
+      caseImage("004", "004-02.webp", "Registro de usuario", "Formulario de creación de cuenta de ClimApp."),
+      caseImage("004", "004-03.webp", "Registro manual de datos climáticos", "Formulario autenticado para guardar observaciones meteorológicas."),
+      caseImage("004", "004-04.webp", "Histórico de registros", "Histórico meteorológico con filtros por municipio y fecha."),
     ],
     conclusion: [
       "El trabajo se centró en que las piezas funcionasen como una plataforma integrada, no como módulos aislados.",
@@ -436,11 +451,11 @@ export const cases: PortfolioCase[] = [
       { name: "Jupyter Notebook", purpose: "Exploración y documentación." },
     ],
     evidence: [
-      "Capturas de la aplicación.",
-      "Dataset unificado.",
-      "Notebooks.",
-      "Repositorio.",
-      "Paneles de mercado, salarios, skills, sesgos y calidad.",
+      caseImage("005", "005-01.webp", "Skills y tecnologías demandadas", "Panel de skills frecuentes y tecnologías de inteligencia artificial usadas."),
+      caseImage("005", "005-02.webp", "Brecha entre tecnologías deseadas y usadas", "Comparación de demanda consolidada y tecnologías emergentes."),
+      caseImage("005", "005-03.webp", "Distribución salarial y sesgos", "Histogramas y diagramas de caja de salarios por seniority."),
+      caseImage("005", "005-04.webp", "Calidad, limpieza y trazabilidad", "Panel de valores nulos, correlaciones y comprobaciones de calidad de datos."),
+      caseImage("005", "005-05.webp", "Recomendaciones de negocio", "Recomendaciones de reskilling, salarios, sesgos y tecnologías emergentes."),
     ],
     conclusion: [
       "El proyecto convierte información laboral heterogénea en una lectura organizada del mercado, incorporando también la calidad y los sesgos de los datos.",
@@ -531,14 +546,14 @@ export const cases: PortfolioCase[] = [
     },
     links: [
       { label: "GitHub", url: "https://github.com/elenacarino-max", type: "github" },
-      { label: "LinkedIn", url: "https://www.linkedin.com/in/elena-de-vicente-391991313/", type: "linkedin" },
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/elena-devicente/", type: "linkedin" },
       {
         label: "Descargar CV",
         url: `${import.meta.env.BASE_URL}documents/cv-elena-de-vicente.pdf`,
         type: "cv",
         status: "available",
       },
-      { label: "Contacto", url: "https://www.linkedin.com/in/elena-de-vicente-391991313/", type: "contact" },
+      { label: "Contacto", url: "https://www.linkedin.com/in/elena-devicente/", type: "contact" },
     ],
     timeline: [
       "Gestión de proyectos",

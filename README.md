@@ -22,7 +22,7 @@ La respuesta se encuentra detrás de cada puerta.
 
 - **Portfolio publicado:** [Abrir El Archivo](https://elenacarino-max.github.io/el-archivo-portfolio/)
 - **Perfil de GitHub:** [elenacarino-max](https://github.com/elenacarino-max)
-- **LinkedIn:** [Elena de Vicente](https://www.linkedin.com/in/elena-de-vicente-391991313/)
+- **LinkedIn:** [Elena de Vicente](https://www.linkedin.com/in/elena-devicente/)
 
 > La URL de publicación puede necesitar actualizarse según la configuración final de GitHub Pages.
 

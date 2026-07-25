@@ -8,27 +8,23 @@ interface EvidenceCardProps {
 function EvidenceVisual({ evidence, index }: { evidence: CaseEvidence; index: number }) {
   if (evidence.image) {
     const imageUrl = `${import.meta.env.BASE_URL}${evidence.image.replace(/^\/+/, "")}`;
-    const image = (
-      <img
-        className="evidence-image"
-        src={imageUrl}
-        alt={evidence.alt ?? evidence.label}
-        loading="lazy"
-      />
-    );
+    const targetUrl = evidence.href ?? imageUrl;
 
-    return evidence.href ? (
+    return (
       <a
         className="evidence-media-link"
-        href={evidence.href}
+        href={targetUrl}
         target="_blank"
         rel="noreferrer noopener"
-        aria-label={`${evidence.label} · abrir evidencia en una pestaña nueva`}
+        aria-label={`${evidence.label} · abrir imagen completa en una pestaña nueva`}
       >
-        {image}
+        <img
+          className="evidence-image"
+          src={imageUrl}
+          alt={evidence.alt ?? evidence.label}
+          loading="lazy"
+        />
       </a>
-    ) : (
-      image
     );
   }
 
