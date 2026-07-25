@@ -553,7 +553,7 @@ export const cases: PortfolioCase[] = [
         type: "cv",
         status: "available",
       },
-      { label: "Contacto", url: "https://www.linkedin.com/in/elena-devicente/", type: "contact" },
+      { label: "Correo profesional", url: "mailto:elenacarino@gmail.com", type: "contact" },
     ],
     timeline: [
       "Gestión de proyectos",

@@ -34,10 +34,17 @@ function ExternalLink({ link }: { link: CaseLink }) {
     );
   }
 
+  const opensNewTab = !link.url.startsWith("mailto:");
+
   return (
-    <a className="case-link" href={link.url} target="_blank" rel="noreferrer noopener">
+    <a
+      className="case-link"
+      href={link.url}
+      target={opensNewTab ? "_blank" : undefined}
+      rel={opensNewTab ? "noreferrer noopener" : undefined}
+    >
       {link.label}
-      <span className="sr-only"> abre en una pestaña nueva</span>
+      {opensNewTab && <span className="sr-only"> abre en una pestaña nueva</span>}
     </a>
   );
 }

@@ -23,9 +23,14 @@ export default function CoverPage() {
           Abrir el archivo
         </Link>
       </motion.div>
-      <div className="cover-door" aria-hidden="true">
-        <span />
-      </div>
+      <Link className="cover-door" to="/archivo" aria-label="Entrar al pasillo de El Archivo">
+        <span className="cover-door-plaque">
+          <small>Acceso principal</small>
+          <strong>EL ARCHIVO</strong>
+          <em>6 expedientes profesionales</em>
+        </span>
+        <span className="cover-door-handle" aria-hidden="true" />
+      </Link>
     </section>
   );
 }
